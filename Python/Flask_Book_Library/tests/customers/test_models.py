@@ -68,7 +68,7 @@ def test_customer_invalid_age_type():
         )
 
 def test_customer_invalid_age_negative():
-    with pytest.raises(ValueError, match="Age must be an integer"):
+    with pytest.raises(ValueError, match="Age must not be negative"):
         Customer(
             name="Test User",
             city="Wrocław",
